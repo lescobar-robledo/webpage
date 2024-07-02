@@ -1,5 +1,7 @@
 ---
-
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -11,12 +13,12 @@
 		<title>Ishihara Lab</title>
 	</head>
 	<body>
-		<a href="/lecb_tutorial_blog">Home</a>
-        <a href="/lecb_tutorial_blog/about/">About</a>
-		<a href="/lecb_tutorial_blog/members">Lab Members</a>
-		<a href="/lecb_tutorial_blog/blog/">Blog</a>
-		<h1>Ishihara Lab Members</h1>
+		<Header />
+		<h1>Lab Members</h1>
 
-
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
