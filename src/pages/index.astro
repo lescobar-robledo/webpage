@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { Content as TestContent } from '../pages/markdown/test.md';
 const pageTitle = "Ishihara Lab";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>Ishihara Lab (bare-bone) Site</h2>
+	<TestContent />
 </BaseLayout>
