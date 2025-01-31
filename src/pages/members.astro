@@ -1,24 +1,96 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Lab Members";
+
 ---
+<BaseLayout pageTitle={pageTitle}>
+	<div class="members-grid">
+		<div class="member-card">
+			<img src="/images/placeholder-1.jpg" alt="Lab Member 1" class="member-image">
+			<h2>Keisuke Ishihara Ph.D</h2>
+			<p class="member-role">Principal Investigator</p>
+			<p class="member-description">Dr. Ishihara leads the lab's research to engineer multicellular 
+				tissues as living, programmable materials. Engineered tissues with physiological and synthetic 
+				functions will act as new platforms that advance human health.
+			</p>
+		</div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Ishihara Lab</title>
-	</head>
-	<body>
-		<Header />
-		<h1>Lab Members</h1>
+		<div class="member-card">
+			<img src="/images/placeholder-2.jpg" alt="Lab Member 2" class="member-image">
+			<h2>Megan Shi.</h2>
+			<p class="member-role">Post-doctoral Researcher</p>
+			<p class="member-description">Megan ensures that the lab runs smoothly, train new members, places orders
+				 for purchasing, and distributes lab duties.</p>
+		</div>
 
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html>
+		<div class="member-card">
+			<img src="/images/placeholder-3.jpg" alt="Lab Member 3" class="member-image">
+			<h2>Yajushi	Khurana</h2>
+			<p class="member-role">Graduate Student</p>
+			<p class="member-description">Yajushi is developing quantitative imaging pipelines to study the 3D structure of engineered tissues.</p>
+		</div>
+
+		<div class="member-card">
+			<img src="/images/placeholder-4.jpg" alt="Lab Member 4" class="member-image">
+			<h2>Luisa Escobar-Robledo</h2>
+			<p class="member-role">Graduate Student</p>
+			<p class="member-description">Luisa is developing a physiological assays to study the function of engineered tissues.</p>
+		</div>
+
+		<div class="member-card">
+			<img src="/images/placeholder-5.jpg" alt="Lab Member 5" class="member-image">
+			<h2>Jin	Jung</h2>
+			<p class="member-role">Undergraduate Student</p>
+			<p class="member-description">Jin works with 3D imaging and microscopy to study the structure of engineered tissues.</p>
+		</div>
+
+		<div class="member-card">
+			<img src="/images/placeholder-6.jpg" alt="Lab Member 6" class="member-image">
+			<h2>Elijah	Vangura</h2>
+			<p class="member-role">Undergraduate Student</p>
+			<p class="member-description">Elijah is working on exploring the effects of osmotic pressures on the distribution and shape of cells.</p>
+		</div>
+	</div>
+
+	<style>
+		.members-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 2rem;
+			padding: 2rem;
+		}
+
+		.member-card {
+			background: #ffffff;
+			border-radius: 8px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			padding: 1.5rem;
+			text-align: center;
+			transition: transform 0.2s ease-in-out;
+		}
+
+		.member-card:hover {
+			transform: translateY(-5px);
+		}
+
+		.member-image {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 1rem;
+		}
+
+		.member-role {
+			color: #666;
+			font-style: italic;
+			margin: 0.5rem 0;
+		}
+
+		.member-description {
+			font-size: 0.9rem;
+			line-height: 1.5;
+			color: #444;
+		}
+	</style>
+</BaseLayout>
